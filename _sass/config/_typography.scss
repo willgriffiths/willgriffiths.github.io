@@ -1,0 +1,62 @@
+@import 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:300,400';
+
+@mixin font-sizes($font-sizes-group) {
+  font-size: map-get($font-sizes-group, 'small');
+
+  @media screen and (min-width: $medium) {
+    font-size: map-get($font-sizes-group, 'medium');
+  }
+
+  @media screen and (min-width: $big) {
+    font-size: map-get($font-sizes-group, 'big');
+  }
+}
+
+$h1-sizes: (
+  'small': 3em,
+  'medium': 4em,
+  'big': 6em
+);
+
+$h2-sizes: (
+  'small': 2em,
+  'medium': 2.5em,
+  'big': 3em
+);
+
+body {
+  font-size: 100%;
+  font-family: $font-secondary;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-family: $font-primary;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  @include font-sizes($h1-sizes);
+  font-weight: 700;
+}
+
+h2 {
+  @include font-sizes($h2-sizes);
+  font-weight: 400;
+}
+
+a {
+  color: $main-accent;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 1px solid $main-accent;
+  }
+}
