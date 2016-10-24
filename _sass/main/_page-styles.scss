@@ -1,13 +1,36 @@
-.header-image {
-  height: 200px;
-  background: url("../assets/images/monsters-small.png") center top no-repeat;
-  background-size: auto 100%;
+.header-upper {
+	height: 300px;
+	margin-bottom: 1.2em;
+}
 
-  @media screen and (min-width: $medium) {
-    background: url("../assets/images/monsters.png") center top no-repeat;
-    background-size: auto 100%;
-    height: 270px;
-  }
+//page styles
+.header-cover {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	height: 300px;
+	background: $dark;
+	width: 100%;
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.50);
+  transform: skewY(-7.9deg);
+}
+
+.header-portrait {
+	border-radius: 50%;
+	position: relative;
+	margin: 0 auto;
+	top: 84px;
+	height: 216px;
+	width: 216px;
+	background: #FFFFFF;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
+
+	img {
+			border-radius: 50%;
+			height: 100%;
+			width: 100%;
+			padding: 8px;
+	}
 }
 
 .main-content {
@@ -20,82 +43,33 @@
   }
 }
 
-fieldset {
-  padding: 1rem 0 0;
-}
+.row {
+	width: 100%;
+	padding-bottom: 3em;
 
-.length-filter-box {
-  display: inline-block;
-  border: none;
-}
+	.image {
+		width: 50%;
+		float: left;
 
-.length-filter-input {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
+		&.right {
+			float: right;
+		}
+	}
 
-  &:checked,
-  &:focus,
-  &:active {
+	.text {
+		width: 50%;
+		float: left;
+		padding: 1em;
+	}
 
-    + label {
-      background: $main-accent;
-      color: $bg-primary;
-    }
-  }
-}
 
-.length-filter-label {
-  padding: .5em .75em;
-  border: 2px solid $main-accent;
-  color: $main-accent;
-  font-weight: 400;
-  cursor: pointer;
-
-  &:first-of-type {
-    border-radius: $border-radius 0 0 $border-radius;
-    border-right: none;
-    margin-right: -4px;
-  }
-
-  &:last-of-type {
-    border-radius: 0 $border-radius $border-radius 0;
-    border-left: none;
-    margin-left: -4px;
-  }
-}
-
-.btn-reload {
-  display: inline-block;
-  vertical-align: sub;
-  padding: 0.4em 0 0;
-  height: 2.5em;
-  width: 2.5em;
-  background: transparent;
-  border: 1px solid transparent;
-
-  &:focus,
-  &:active {
-    border: 1px solid $main-accent;
-    outline: 0;
-  }
-}
-
-.btn-icon {
-  fill: $main-accent;
-}
-
-.output-box {
-  margin: 1.5em 0 2em;
-  padding: 1em 1.5em;
-  border: 1px solid $main-accent;
-  font-size: 1.1em;
-  border-radius: $border-radius;
-  white-space: pre-wrap;
+	img {
+		display: block;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+	}
 
   @media screen and (min-width: $medium) {
-    padding: 1.75em 2em;
-    font-size: 1.25em;
   }
 }

@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+    <header class="home">
+        <div class="header-upper">
+            <div class="header-cover"></div>
+            <div class="header-portrait"><img src="https://gravatar.com/avatar/2ca0750705f9b9c998bf3dad2af39649?s=512&d=https://codepen.io/assets/avatars/user-avatar-512x512-f51d1b0ffd7cc3c1d117179dcbbec3b9.png"></img>
+            </div>
+        </div>
+        <h1 class="header-title">Will Griffiths</h1>
+        <h2 class="header-subtitle">It's time for another adventure</h2>
+    </header>
 
-    <!-- {% include footer.html %} -->
+    <div class="l-main-wrapper">
 
-  </body>
+        <section class="main-content">
+            <div class="row clearfix">
+                <div class="image right">
+                    <img></img>
+                </div>
+                <div class="text">
+                    <h3>Meteor Impacts</h3>
+                    <p>Here I used the D3 visualization library to show the 200 largest meteorite impacts recorded. I chose Canvas over SVG for performance reasons.</p>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="image">
+                    <img></img>
+                </div>
+                <div class="text">
+                    <h3>A Dungeon RPG</h3>
+                    <p>This is a role playing game I created for the Freecodecamp curiculum. You can walk around the world, pick up items and slay enemies.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    {% include footer.html %}
+</body>
 
 </html>
