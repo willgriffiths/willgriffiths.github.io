@@ -1,0 +1,75 @@
+.header-upper {
+	height: 300px;
+	margin-bottom: 1.2em;
+}
+
+//page styles
+.header-cover {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	height: 300px;
+	background: $dark;
+	width: 100%;
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.50);
+  transform: skewY(-7.9deg);
+}
+
+.header-portrait {
+	border-radius: 50%;
+	position: relative;
+	margin: 0 auto;
+	top: 84px;
+	height: 216px;
+	width: 216px;
+	background: #FFFFFF;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
+
+	img {
+			border-radius: 50%;
+			height: 100%;
+			width: 100%;
+			padding: 8px;
+	}
+}
+
+.main-content {
+  position: relative;
+  padding: 0 0 2rem;
+
+  @media screen and (min-width: $small) {
+    padding: 0;
+    position: static;
+  }
+}
+
+.row {
+	width: 100%;
+	padding-bottom: 3em;
+
+	.image {
+		width: 50%;
+		float: left;
+
+		&.right {
+			float: right;
+		}
+	}
+
+	.text {
+		width: 50%;
+		float: left;
+		padding: 1em;
+	}
+
+
+	img {
+		display: block;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+	}
+
+  @media screen and (min-width: $medium) {
+  }
+}

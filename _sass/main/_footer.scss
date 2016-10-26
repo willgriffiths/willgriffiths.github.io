@@ -1,0 +1,41 @@
+footer {
+  position: absolute;
+  height: $footer-height;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 0 2em;
+  text-align: center;
+
+  .wrapper {
+    margin-bottom: 1em;
+  }
+}
+
+
+.contact-links {
+	margin: 1em 0;
+  a {
+    color: $dark;
+    text-decoration: none;
+  	padding: 0.5em;
+
+    &:hover {
+  		color: $main-accent;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: 1px solid $main-accent;
+    }
+  }
+}
+
+svg {
+  path {
+    fill: $dark;
+    &:hover {
+      fill: $main-accent;
+    }
+  }
+}
