@@ -22,7 +22,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "precommit": "yarn test",
-    "prepush": "yarn test"
+    "prepush": "yarn test",
+    "deploy": "yarn precommit && gatsby build --prefix-paths && gh-pages -d public -b master"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -31,6 +32,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.8.2",
+    "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
     "jest": "^23.1.0",
     "jest-runner-eslint": "^0.6.0",
