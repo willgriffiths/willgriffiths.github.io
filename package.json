@@ -17,15 +17,31 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "precommit": "yarn test",
+    "prepush": "yarn test"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.8.2",
+    "husky": "^0.14.3",
+    "jest": "^23.1.0",
+    "jest-runner-eslint": "^0.6.0",
     "prettier": "^1.12.0"
+  },
+  "jest": {
+    "runner": "jest-runner-eslint",
+    "displayName": "lint",
+    "testMatch": [
+      "<rootDir>/src/**/*.js"
+    ]
   },
   "repository": {
     "type": "git",
