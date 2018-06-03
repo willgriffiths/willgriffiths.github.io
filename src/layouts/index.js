@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import Header from "../components/header";
 import "./index.css";
 import config from "../../gatsby-config";
+import Footer from "../components/footer";
 
 const Layout = ({ children, data }) => (
   <div>
@@ -15,17 +16,13 @@ const Layout = ({ children, data }) => (
         { name: "keywords", content: "sample, something" }
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: "0 auto",
-        maxWidth: 960,
-        padding: "0px 1.0875rem 1.45rem",
-        paddingTop: 0
-      }}
-    >
-      {children()}
-    </div>
+    <Header siteTitle={data.site.siteMetadata.title} siteTagline={data.site.siteMetadata.tagline} />
+    <div>{children()}</div>
+    <Footer
+      author={data.site.siteMetadata.author}
+      email={data.site.siteMetadata.email}
+      githubUsername={data.site.siteMetadata.githubUsername}
+    />
   </div>
 );
 
@@ -53,6 +50,10 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        tagline
+        author
+        email
+        githubUsername
       }
     }
   }
