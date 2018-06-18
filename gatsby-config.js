@@ -7,5 +7,26 @@ module.exports = {
     siteURL: "willgriffiths.github.io",
     githubUsername: "willgriffiths"
   },
-  plugins: ["gatsby-plugin-react-helmet"]
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|cache|public)/,
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: "markdown-pages"
+      }
+    },
+    "gatsby-transformer-remark"
+  ]
 };

@@ -8,6 +8,7 @@ module.exports = {
     browser: true,
     jest: true,
   },
+  globals: { graphql: true },
   rules: {
     'react/jsx-filename-extension': [
       1,
@@ -18,7 +19,9 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
-        specialLink: ['to', 'hrefLeft', 'hrefRight'],
+        components: ['Link'],
+        specialLink: ['to'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
       },
     ],
     'linebreak-style': 'off',
