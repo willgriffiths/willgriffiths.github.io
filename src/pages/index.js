@@ -16,6 +16,7 @@ const Title = styled.h2`
  text-decoration: none;
   padding: 20px 30px;
   font-size: 24px;
+  font-weight: 400;
   border-width: 1px;
   border-style: solid;
   border-color: ${secondary};
