@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Will Griffiths Code Playground",
+    title: "Will Griffiths | Front End Developer Brisbane",
     author: "Will Griffiths",
     email: "thiswill@gmail.com",
-    tagline: "A place to stick my code",
+    tagline: "Front end React developer building things in Brisbane Australia.",
     siteURL: "willgriffiths.github.io",
     githubUsername: "willgriffiths"
   },
@@ -28,6 +28,14 @@ module.exports = {
         name: "markdown-pages"
       }
     },
-    "gatsby-transformer-remark"
+    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: [
+          "source sans pro:400,700,600i" // you can also specify font weights and styles
+        ]
+      }
+    }
   ]
 };

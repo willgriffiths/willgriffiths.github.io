@@ -1,21 +1,60 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Text, View } from "react-primitives";
-import styled from "styled-components/primitives";
+import styled from "styled-components";
+import Link from "gatsby-link";
 import { siteMetadata } from "../../gatsby-config";
+import { secondary, foreground } from "../theme/colors";
 
-const Container = styled.View`
-  border: red;
+const Container = styled.div`
+  padding: 0 20px;
+  display: flex;
+  width: 100%;
+  @media (min-width: 1050px) {
+    padding: 0 140px;
+    margin-bottom: 100px;
+  }
+`;
+
+const NavBar = styled.nav`
+  flex: 1;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+  @media (min-width: 1050px) {
+    padding: 40px;
+  }
+`;
+
+const NavItem = styled(Link)`
+  text-decoration: none;
+  position: relative;
+  padding: 20px 30px;
+  font-size: 24px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${secondary};
+  border-image: linear-gradient(137.5deg, #e54230, #a22ae5);
+  border-image-slice: 1;
+  border-image-width: 1;  
+  color: ${foreground};
+
+  &:focus {
+    outline-color: ${foreground};
+  }
+  &:hover {
+    border-color: ${foreground};
+    border-image: none;
+    background: ${secondary};
+    background: linear-gradient(137.5deg, #e54230, #a22ae5);
+  }
 `;
 
 const Header = ({ siteTitle, siteTagline }) => (
   <Container>
-    <View accessibilityRole="banner">
-      <Text accessibilityRole="heading">{siteTitle}</Text>
-      <Text accessibilityRole="heading" aria-level="2">
-        {siteTagline}
-      </Text>
-    </View>
+    <NavBar>
+      <NavItem to="#contact">Contact</NavItem>
+    </NavBar>
   </Container>
 );
 
