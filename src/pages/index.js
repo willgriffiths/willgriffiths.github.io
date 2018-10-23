@@ -88,6 +88,7 @@ const IndexPage = () => (
       <Text>Mobx and Mobx State Tree</Text>
       <Text>React Native</Text>
       <Text>Electron</Text>
+      <Text>Gatsby ;)</Text>
       <Text>Jest</Text>
       <Text>Eslint and Prettier</Text>
       <Text>Circle CI</Text>
