@@ -60,9 +60,15 @@ const IndexPage = () => (
     </Section>
     <Section>
       <Title id="projects">Side stuff</Title>
+      <Text>2018</Text>
       <Text>OCR Image Renaming Tool</Text>
       <Text>Industry: Lab Tech</Text>
       <Text>Tech: Electron, React, Tesseract, Sharp, Electron Builder</Text>
+      <Text>&nbsp;</Text>
+      <Text>2017</Text>
+      <Text>Gymnastics Workout App</Text>
+      <Text>Industry: Fitness</Text>
+      <Text>Tech: NextJS, React, Material UI, Now</Text>
     </Section>
     <Section>
       <Title id="quick-tips">Quick tips</Title>
