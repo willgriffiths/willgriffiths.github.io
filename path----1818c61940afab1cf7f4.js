@@ -1,2 +1,2 @@
-webpackJsonp([60335399758886],{86:function(i,t){i.exports={data:{site:{siteMetadata:{title:"Will Griffiths | Front End Developer Brisbane",tagline:"Front end React developer building things in Brisbane Australia.",author:"Will Griffiths",email:"thiswill@gmail.com",githubUsername:"willgriffiths"}}},layoutContext:{}}}});
+webpackJsonp([60335399758886],{85:function(i,t){i.exports={data:{site:{siteMetadata:{title:"Will Griffiths | Front End Developer Brisbane",tagline:"Front end React developer building things in Brisbane Australia.",author:"Will Griffiths",email:"thiswill@gmail.com",githubUsername:"willgriffiths"}}},layoutContext:{}}}});
 //# sourceMappingURL=path----1818c61940afab1cf7f4.js.map
