@@ -47,14 +47,10 @@ const IndexPage = () => (
       <Title id="work">Work</Title>
       <Text>Frontend Developer</Text>
       <Text>Fusion Sport</Text>
-      <Text>Human Performance Framework</Text>
-      <Text>&nbsp;</Text>
-      <Text>Product Owner and Sales</Text>
-      <Text>Lunar Logic</Text>
-      <Text>Agile Software House</Text>
+      <Text>Building the Human Performance Framework</Text>
     </Section>
     <Section>
-      <Title id="focus">Focus</Title>
+      <Title id="now">What am I doing now?</Title>
       <Text>
         Making this site less{" "}
         <span role="img" aria-label="crappy">
@@ -63,15 +59,20 @@ const IndexPage = () => (
       </Text>
     </Section>
     <Section>
-      <Title id="projects">Projects</Title>
+      <Title id="projects">Side stuff</Title>
       <Text>OCR Image Renaming Tool</Text>
       <Text>Industry: Lab Tech</Text>
-      <Text>Libraries: Electron, React, Tesseract, Sharp, Electron Builder</Text>
+      <Text>Tech: Electron, React, Tesseract, Sharp, Electron Builder</Text>
     </Section>
     <Section>
-      <Title id="short">Quick tips</Title>
+      <Title id="quick-tips">Quick tips</Title>
       <Text>VS Code - insert sequence</Text>
       <Text>VS Code - toggleFind</Text>
+      <Text>Git - The no commit cherry pick</Text>
+    </Section>
+    <Section>
+      <Title id="codepens">Pens</Title>
+      <Text>[Placeholder]</Text>
     </Section>
     <Section>
       <Title id="tech">What I do</Title>

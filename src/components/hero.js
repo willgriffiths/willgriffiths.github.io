@@ -40,7 +40,7 @@ const Hero = () => (
         Hi, I&#39;m Will Griffiths.
       </Headline>
       <Tagline accessibilityRole="heading" aria-level="2">
-        I&#39;m a <FeatureSpan>front-end developer</FeatureSpan> and this is where I put my stuff.
+        I&#39;m a <FeatureSpan>front-end developer</FeatureSpan> from Brisbane, Australia.
       </Tagline>
     </HeroText>
   </Container>
