@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "gatsby-link";
 import { siteMetadata } from "../../gatsby-config";
-import { secondary, foreground } from "../theme/colors";
+import { secondary, foreground, background } from "../theme/colors";
 
 const Container = styled.div`
   padding: 0 20px;
@@ -36,7 +36,7 @@ const NavItem = styled(Link)`
   border-color: ${secondary};
   border-image: linear-gradient(137.5deg, #e54230, #a22ae5);
   border-image-slice: 1;
-  border-image-width: 1;  
+  border-image-width: 1;
   color: ${foreground};
 
   &:focus {
@@ -44,6 +44,7 @@ const NavItem = styled(Link)`
   }
   &:hover {
     border-color: ${foreground};
+    text-shadow: 1px 1px 2px ${background};
     border-image: none;
     background: ${secondary};
     background: linear-gradient(137.5deg, #e54230, #a22ae5);
