@@ -8,6 +8,8 @@ h2,
 h3,
 h4,
 p,
-nav {
+nav,
+span,
+a {
   font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
 }
