@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import styled from "styled-components";
+import Project from "../components/Project";
 
 const ContactLink = styled.a`
   text-decoration: none;
@@ -41,7 +43,11 @@ const Section = styled.section`
   margin-bottom: 58px;
 `;
 
-const IndexPage = () => (
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: { edges }
+  }
+}) => (
   <Container>
     <Section>
       <Title id="work">Work</Title>
@@ -60,15 +66,7 @@ const IndexPage = () => (
     </Section>
     <Section>
       <Title id="projects">Side stuff</Title>
-      <Text>2018</Text>
-      <Text>OCR Image Renaming Tool</Text>
-      <Text>Industry: Lab Tech</Text>
-      <Text>Tech: Electron, React, Tesseract, Sharp, Electron Builder</Text>
-      <Text>&nbsp;</Text>
-      <Text>2017</Text>
-      <Text>Gymnastics Workout App</Text>
-      <Text>Industry: Fitness</Text>
-      <Text>Tech: NextJS, React, Material UI, Now</Text>
+      <Projects edges={edges} />
     </Section>
     <Section>
       <Title id="quick-tips">Quick tips</Title>
@@ -122,3 +120,36 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+const Projects = ({ edges }) => (
+  <div>
+    {edges.map((edge) => (
+      <Project key={edge.node.path} frontmatter={edge.node.frontmatter} html={edge.node.html} />
+    ))}
+  </div>
+);
+
+export const pageQuery = graphql`
+  query allMarkdown {
+    allMarkdownRemark(filter: { fileAbsolutePath: { glob: "**/projects/**" } }) {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+            date
+            tech
+            industry
+          }
+          tableOfContents
+          wordCount {
+            paragraphs
+            sentences
+            words
+          }
+          timeToRead
+        }
+      }
+    }
+  }
+`;
