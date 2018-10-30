@@ -38,12 +38,12 @@ const Project = ({ frontmatter, html }) => (
 );
 
 Project.defaultProps = {
-  frontmatter: "",
+  frontmatter: {},
   html: ""
 };
 
 Project.propTypes = {
-  frontmatter: PropTypes.string,
+  frontmatter: PropTypes.shape({}),
   html: PropTypes.node
 };
 

@@ -1,40 +1,42 @@
 module.exports = {
-  extends: ['airbnb'],
-  plugins: ['prettier'],
+  parser: "babel-eslint",
+  rules: {
+    strict: 0
+  },
+  extends: ["airbnb", "plugin:prettier/recommended", "prettier/react"],
   settings: {
-    'import/core-modules': ['react', 'prop-types', 'graphql'],
+    "import/core-modules": ["react", "prop-types", "graphql"]
   },
   env: {
     browser: true,
-    jest: true,
+    jest: true
   },
-  globals: { graphql: true },
   rules: {
-    'react/jsx-filename-extension': [
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [
       1,
       {
-        extensions: ['.js'],
-      },
+        extensions: [".js"]
+      }
     ],
-    'jsx-a11y/anchor-is-valid': [
-      'error',
+    "jsx-a11y/anchor-is-valid": [
+      "error",
       {
-        components: ['Link'],
-        specialLink: ['to'],
-        aspects: ['noHref', 'invalidHref', 'preferButton'],
-      },
+        components: ["Link"],
+        specialLink: ["to"],
+        aspects: ["noHref", "invalidHref", "preferButton"]
+      }
     ],
-    'linebreak-style': 'off',
-    quotes: ['error', 'double'],
-    'import/extensions': 'off',
-    'import/no-unresolved': 'off',
-    'arrow-parens': ['error', 'always'],
-    'comma-dangle': ['error', 'never'],
-    'no-unused-vars': [
-      'error',
+    "react/no-danger": "off",
+    "linebreak-style": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "no-unused-vars": [
+      "error",
       {
-        args: 'none',
-      },
-    ],
-  },
-}
+        args: "none"
+      }
+    ]
+  }
+};

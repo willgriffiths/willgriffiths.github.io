@@ -5,9 +5,13 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   min-height: 600px
-  padding: 0 20px;
-  @media (min-width: 1050px) {
-    padding: 0 140px;
+  margin-bottom: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: 920px) {
+    padding-left: 140px;
+    padding-right: 140px;
+    margin-bottom: 300px
   }
 `;
 
@@ -40,7 +44,8 @@ const Hero = () => (
         Hi, I&#39;m Will Griffiths.
       </Headline>
       <Tagline accessibilityRole="heading" aria-level="2">
-        I&#39;m a <FeatureSpan>front-end developer</FeatureSpan> from Brisbane, Australia.
+        I&#39;m a <FeatureSpan>front-end developer</FeatureSpan> from Brisbane,
+        Australia.
       </Tagline>
     </HeroText>
   </Container>
