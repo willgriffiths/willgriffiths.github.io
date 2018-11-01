@@ -29,7 +29,7 @@ module.exports = {
     ],
     "react/no-danger": "off",
     "linebreak-style": "off",
-    "implicit-arrow-linebreak": "off",
+    "implicit-arrow-linebreak": 0,
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "no-unused-vars": [
