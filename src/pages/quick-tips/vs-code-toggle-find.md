@@ -1,5 +1,4 @@
 ---
-path: "/quick-tips/vs-code-toggle-find"
 date: "2017-11-07"
 title: "VS Code - Toggle Find"
 tags: "vs code, multi-cursor"

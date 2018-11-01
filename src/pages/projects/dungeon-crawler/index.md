@@ -1,5 +1,4 @@
 ---
-path: "/projects/dungeon-crawler"
 date: "2017-11-07"
 title: "Dungeon Crawler"
 industy: null

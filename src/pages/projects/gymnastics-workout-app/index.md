@@ -1,5 +1,4 @@
 ---
-path: "/projects/gymnastics-workout-app"
 date: "2017-12-01"
 title: "Gymnastics Workout App"
 industry: "Fitness"

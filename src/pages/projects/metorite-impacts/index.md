@@ -1,5 +1,4 @@
 ---
-path: "/projects/meteorite-impacts"
 date: "2017-11-07"
 title: "Meteorite Impacts"
 industry: null

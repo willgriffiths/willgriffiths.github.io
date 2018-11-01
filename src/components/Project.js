@@ -1,15 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-
-const Link = styled.a`
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: 400;
-  color: white;
-  display: block;
-  margin-bottom: 12px;
-`;
+import Link from "./Link";
 
 const Text = styled.p`
   font-size: 24px;
@@ -25,15 +18,14 @@ const Container = styled.div`
   }
 `;
 
-const Project = ({ frontmatter, html }) => (
+const Project = ({ fields, frontmatter, html }) => (
   <Container>
-    <Text>{frontmatter.date.slice(0, 4)}</Text>
-    <Link href={frontmatter.path}>
+    <Text>{frontmatter.date && frontmatter.date.slice(0, 4)}</Text>
+    <Link to={fields.slug}>
       <Text>{frontmatter.title}</Text>
     </Link>
     {frontmatter.industry && <Text>Industry: {frontmatter.industry}</Text>}
     {frontmatter.tech && <Text>Tech: {frontmatter.tech}</Text>}
-    <div dangerouslySetInnerHTML={{ __html: html }} />
   </Container>
 );
 

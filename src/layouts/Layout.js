@@ -10,6 +10,7 @@ import theme from "../theme/colors";
 
 const Body = styled.div`
   height: 100%;
+  min-height: 100vh;
   background: ${theme.background};
   color: ${theme.foreground};
 `;

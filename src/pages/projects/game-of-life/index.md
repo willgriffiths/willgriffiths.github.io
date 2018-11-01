@@ -1,5 +1,4 @@
 ---
-path: "/projects/game-of-life"
 date: "2017-11-07"
 title: "Game of Life"
 industry: null

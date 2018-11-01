@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import styled from "styled-components";
 import { graphql } from "gatsby";
+import styled, { css } from "styled-components";
 import Project from "../components/Project";
 import Layout from "../layouts";
 import Hero from "../components/Hero";
+import Link from "../components/Link";
+import Container from "../components/Container";
 
 const ContactLink = styled.a`
   text-decoration: none;
@@ -28,18 +30,6 @@ const Title = styled.h2`
   margin-bottom: 32px;
   font-size: 32px;
   font-weight: 400;
-`;
-
-const Container = styled.div`
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  @media (min-width: 1050px) {
-    padding: 0 140px;
-    margin-bottom: 100px;
-  }
 `;
 
 const Section = styled.section`
@@ -133,7 +123,7 @@ const Projects = ({ edges }) =>
     <div>
       {edges.map((edge) => (
         <Project
-          key={edge.node.path}
+          fields={edge.node.fields}
           frontmatter={edge.node.frontmatter}
           html={edge.node.html}
         />
@@ -145,7 +135,15 @@ const Tips = ({ edges }) =>
   edges && (
     <div>
       {edges.map((edge) => (
-        <Text key={edge.node.path}>{edge.node.frontmatter.title}</Text>
+        <Link
+          to={edge.node.fields.slug}
+          className={css`
+            text-decoration: none;
+            color: inherit;
+          `}
+        >
+          <Text>{edge.node.frontmatter.title}</Text>
+        </Link>
       ))}
     </div>
   );
@@ -157,12 +155,14 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
-            path
             title
             date
-            tech
             industry
+            tech
           }
           tableOfContents
           wordCount {
@@ -179,12 +179,13 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
-            path
             title
             date
-            tech
-            industry
+            tags
           }
           tableOfContents
           wordCount {
