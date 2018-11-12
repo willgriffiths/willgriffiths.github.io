@@ -1,19 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import styled from "styled-components";
 import { graphql, StaticQuery } from "gatsby";
 import Header from "../components/header";
-import "./Layout.css";
-import "../App.css";
-import theme from "../theme/colors";
-
-const Body = styled.div`
-  height: 100%;
-  min-height: 100vh;
-  background: ${theme.background};
-  color: ${theme.foreground};
-`;
+import CoreCSS from "./CoreCSS";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,7 +21,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={(data) => (
-      <Body>
+      <React.Fragment>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -43,8 +33,9 @@ const Layout = ({ children }) => (
           siteTitle={data.site.siteMetadata.title}
           siteTagline={data.site.siteMetadata.tagline}
         />
+        <CoreCSS />
         {children}
-      </Body>
+      </React.Fragment>
     )}
   />
 );

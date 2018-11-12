@@ -6,11 +6,11 @@ import Project from "../components/Project";
 import Layout from "../layouts";
 import Hero from "../components/Hero";
 import Link from "../components/Link";
-import Container from "../components/Container";
+import { Container, Section } from "../components/FlexGrid";
+import { typography } from "../styles/variables";
 
 const ContactLink = styled.a`
   text-decoration: none;
-  font-size: 24px;
   font-weight: 400;
   color: white;
   display: block;
@@ -18,30 +18,29 @@ const ContactLink = styled.a`
 `;
 
 const Text = styled.p`
-  font-size: 24px;
   font-weight: 400;
   margin-bottom: 12px;
-  margin-top: 0;
 `;
 
 const Title = styled.h2`
   text-decoration: none;
-  margin-top: 0;
+
   margin-bottom: 32px;
-  font-size: 32px;
+
   font-weight: 400;
+  line-height: ${typography.headerLineHeight};
 `;
 
-const Section = styled.section`
-  margin-bottom: 58px;
-`;
+// const Section = styled.section`
+//   margin-bottom: 58px;
+// `;
 
 const IndexPage = ({ data }) => {
   const { ProjectsData, TipsData } = data;
   return (
     <Layout>
-      <Hero />
       <Container>
+        <Hero />
         <Section>
           <Title id="work">Work</Title>
           <Text>Frontend Developer</Text>

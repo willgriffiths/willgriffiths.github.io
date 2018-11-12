@@ -6,10 +6,8 @@ import Layout from "../layouts";
 import Container from "../components/Container";
 
 const Text = styled.p`
-  font-size: 24px;
   font-weight: 400;
   margin-bottom: 12px;
-  margin-top: 0;
 `;
 
 const QuickTipTemplate = ({ data }) => {

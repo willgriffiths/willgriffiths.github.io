@@ -5,10 +5,8 @@ import styled from "styled-components";
 import Link from "./Link";
 
 const Text = styled.p`
-  font-size: 24px;
   font-weight: 400;
   margin-bottom: 12px;
-  margin-top: 0;
 `;
 
 const Container = styled.div`

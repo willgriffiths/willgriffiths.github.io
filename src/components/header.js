@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { siteMetadata } from "../../gatsby-config";
-import theme from "../theme/colors";
+import theme from "../styles/colors";
 
 const { secondary, foreground, background } = theme;
 
@@ -11,10 +11,6 @@ const Container = styled.div`
   padding: 0 20px;
   display: flex;
   width: 100%;
-  @media (min-width: 1050px) {
-    padding: 0 140px;
-    margin-bottom: 100px;
-  }
 `;
 
 const NavBar = styled.nav`
@@ -32,7 +28,6 @@ const NavItem = styled(Link)`
   text-decoration: none;
   position: relative;
   padding: 20px 30px;
-  font-size: 24px;
   border-width: 1px;
   border-style: solid;
   border-color: ${secondary};
