@@ -146,6 +146,7 @@ const Tips = ({ edges }) =>
 export const pageQuery = graphql`
   query Index {
     ProjectsData: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { glob: "**/projects/**" } }
     ) {
       edges {
