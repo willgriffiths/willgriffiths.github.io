@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import { graphql, StaticQuery } from "gatsby";
 import Header from "../components/header";
 import CoreCSS from "./CoreCSS";
+import Normalize from "./Normalize";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -34,6 +35,7 @@ const Layout = ({ children }) => (
           siteTagline={data.site.siteMetadata.tagline}
         />
         <CoreCSS />
+        <Normalize />
         {children}
       </React.Fragment>
     )}

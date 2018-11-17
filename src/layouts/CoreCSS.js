@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { normalize } from "polished";
 import theme from "../styles/colors";
 import { media } from "../styles/style-utils";
 import { typography } from "../styles/variables";
@@ -9,8 +8,6 @@ const { baseFontSize, baseLineHeight } = typography;
 
 // eslint-disable-next-line
 const CoreCSS = createGlobalStyle`
-  ${normalize()}
-
   * {
     box-sizing: border-box;
   }
@@ -26,11 +23,14 @@ const CoreCSS = createGlobalStyle`
   a {
     font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
   }
-
   html {
     /* https://css-tricks.com/optimizing-large-scale-displays/ */
     line-height: ${baseLineHeight};
     font-size: ${baseFontSize}px;
+  }
+
+  html {
+    /* https://css-tricks.com/optimizing-large-scale-displays/ */
     ${media.medium`
     font-size: ${baseFontSize * 1.2}px;
     line-height: ${baseLineHeight * 1.2};
@@ -38,7 +38,7 @@ const CoreCSS = createGlobalStyle`
     ${media.large`font-size: ${baseFontSize * 1.3}px;`}
     ${media.xlarge`font-size: ${baseFontSize * 1.4}px;`}
   }
-
+  
   body {
     color: ${theme.foreground};
     background-color: ${theme.background};
