@@ -3,11 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "./Link";
-
-const Text = styled.p`
-  font-weight: 400;
-  margin-bottom: 12px;
-`;
+import Text from "./Text";
 
 const Container = styled.div`
   margin-bottom: 24px;

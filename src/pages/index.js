@@ -5,6 +5,7 @@ import styled, { css } from "styled-components";
 import Project from "../components/Project";
 import Layout from "../layouts";
 import Hero from "../components/Hero";
+import Text from "../components/Text";
 import Link from "../components/Link";
 import { Container, Section } from "../components/FlexGrid";
 import { typography } from "../styles/variables";
@@ -14,11 +15,6 @@ const ContactLink = styled.a`
   font-weight: 400;
   color: white;
   display: block;
-  margin-bottom: 12px;
-`;
-
-const Text = styled.p`
-  font-weight: 400;
   margin-bottom: 12px;
 `;
 
