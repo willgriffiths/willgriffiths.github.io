@@ -7,8 +7,9 @@ import Layout from "../layouts";
 import Hero from "../components/Hero";
 import Text from "../components/Text";
 import Link from "../components/Link";
+import Title from "../components/Title";
+
 import { Container, Section } from "../components/FlexGrid";
-import { typography } from "../styles/variables";
 
 const ContactLink = styled.a`
   text-decoration: none;
@@ -18,14 +19,6 @@ const ContactLink = styled.a`
   margin-bottom: 12px;
 `;
 
-const Title = styled.h2`
-  text-decoration: none;
-
-  margin-bottom: 32px;
-
-  font-weight: 400;
-  line-height: ${typography.headerLineHeight};
-`;
 
 // const Section = styled.section`
 //   margin-bottom: 58px;
