@@ -19,11 +19,6 @@ const ContactLink = styled.a`
   margin-bottom: 12px;
 `;
 
-
-// const Section = styled.section`
-//   margin-bottom: 58px;
-// `;
-
 const IndexPage = ({ data }) => {
   const { ProjectsData, TipsData } = data;
   return (
