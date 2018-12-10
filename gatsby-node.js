@@ -25,7 +25,6 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const quickTipTemplate = nodePath.resolve(`src/templates/quick-tip.js`);
     const projectTemplate = nodePath.resolve(`src/templates/project.js`);
     // Query for markdown nodes to use in creating pages.
     resolve(
@@ -52,11 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           const { slug } = node.fields;
 
-          let template = projectTemplate;
-
-          if (slug.includes("/quick-tips/")) {
-            template = quickTipTemplate;
-          }
+          const template = projectTemplate;
 
           createPage({
             component: template,

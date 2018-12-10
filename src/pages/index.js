@@ -1,12 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { graphql } from "gatsby";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Project from "../components/Project";
 import Layout from "../layouts";
 import Hero from "../components/Hero";
 import Text from "../components/Text";
-import Link from "../components/Link";
 import Title from "../components/Title";
 
 import { Container, Section } from "../components/FlexGrid";
@@ -20,7 +19,7 @@ const ContactLink = styled.a`
 `;
 
 const IndexPage = ({ data }) => {
-  const { ProjectsData, TipsData } = data;
+  const { ProjectsData } = data;
   return (
     <Layout>
       <Container>
@@ -43,10 +42,6 @@ const IndexPage = ({ data }) => {
         <Section>
           <Title id="projects">Side stuff</Title>
           <Projects edges={ProjectsData.edges} />
-        </Section>
-        <Section>
-          <Title id="quick-tips">Quick tips</Title>
-          <Tips edges={TipsData.edges} />
         </Section>
         <Section>
           <Title id="tech">What I do</Title>
@@ -110,23 +105,6 @@ const Projects = ({ edges }) =>
     </div>
   );
 
-const Tips = ({ edges }) =>
-  edges && (
-    <div>
-      {edges.map((edge) => (
-        <Link
-          to={edge.node.fields.slug}
-          className={css`
-            text-decoration: none;
-            color: inherit;
-          `}
-        >
-          <Text>{edge.node.frontmatter.title}</Text>
-        </Link>
-      ))}
-    </div>
-  );
-
 export const pageQuery = graphql`
   query Index {
     ProjectsData: allMarkdownRemark(
@@ -143,29 +121,6 @@ export const pageQuery = graphql`
             date
             industry
             tech
-          }
-          tableOfContents
-          wordCount {
-            paragraphs
-            sentences
-            words
-          }
-          timeToRead
-        }
-      }
-    }
-    TipsData: allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "**/quick-tips/**" } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date
-            tags
           }
           tableOfContents
           wordCount {
