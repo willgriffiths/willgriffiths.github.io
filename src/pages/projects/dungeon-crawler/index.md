@@ -1,8 +1,0 @@
----
-date: "2017-11-07"
-title: "Dungeon Crawler"
-industy: null
-tech: Javascript
----
-
-This is a role playing game I created for the Freecodecamp curiculum. You can walk around the world, pick up items and slay enemies.
