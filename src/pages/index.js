@@ -49,10 +49,6 @@ const IndexPage = ({ data }) => {
           <Tips edges={TipsData.edges} />
         </Section>
         <Section>
-          <Title id="codepens">Pens</Title>
-          <Text>[Placeholder]</Text>
-        </Section>
-        <Section>
           <Title id="tech">What I do</Title>
           <Text>Javascript</Text>
           <Text>React</Text>
