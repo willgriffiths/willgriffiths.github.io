@@ -21,6 +21,19 @@ const ProjectTemplate = ({ data }) => {
           )}
           {frontmatter.tech && <Text>Tech: {frontmatter.tech}</Text>}
           <div dangerouslySetInnerHTML={{ __html: html }} />
+          {frontmatter.image && (
+            <div style={{ width: "100%", alignContent: "center" }}>
+              <img
+                src={frontmatter.image}
+                alt={frontmatter.imageAlt}
+                style={{
+                  marginTop: "1rem",
+                  maxHeight: "20rem",
+                  height: "20rem"
+                }}
+              />
+            </div>
+          )}
         </Section>
       </Container>
     </Layout>
@@ -38,6 +51,7 @@ export const query = graphql`
         date
         industry
         tech
+        image
       }
     }
   }
