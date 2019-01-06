@@ -5,6 +5,7 @@ import { graphql, StaticQuery } from "gatsby";
 import Header from "../components/header";
 import CoreCSS from "./CoreCSS";
 import Normalize from "./Normalize";
+import favicon from "../Favicon.png";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,6 +29,9 @@ const Layout = ({ children }) => (
           meta={[
             { name: "description", content: data.site.siteMetadata.tagline },
             { name: "keywords", content: "sample, something" }
+          ]}
+          link={[
+            { rel: "shortcut icon", type: "image/png", href: `${favicon}` }
           ]}
         />
         <Header
