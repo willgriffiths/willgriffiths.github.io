@@ -32,12 +32,7 @@ const IndexPage = ({ data }) => {
         </Section>
         <Section>
           <Title id="now">What am I doing now?</Title>
-          <Text>
-            Making this site less{" "}
-            <span role="img" aria-label="crappy">
-              💩
-            </span>
-          </Text>
+          <Text>Getting to know my newborn daughter.</Text>
         </Section>
         <Section>
           <Title id="projects">Side stuff</Title>
