@@ -33,16 +33,16 @@ const CoreCSS = createGlobalStyle`
     /* https://css-tricks.com/optimizing-large-scale-displays/ */
     ${media.medium`
     font-size: ${baseFontSize * 1.2}px;
-    line-height: ${baseLineHeight * 1.2};
     `}
-    ${media.large`font-size: ${baseFontSize * 1.3}px;`}
-    ${media.xlarge`font-size: ${baseFontSize * 1.4}px;`}
+    ${media.large`font-size: ${baseFontSize * 1.25}px; line-height: 1.4;`}
   }
   
   body {
     color: ${theme.foreground};
     background-color: ${theme.background};
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 `;
 

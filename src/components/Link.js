@@ -8,12 +8,11 @@ export default styled(Link)`
   font-weight: 400;
   color: ${theme.secondary};
   display: block;
-  margin-bottom: 12px;
   :visited {
-    color: ${lighten(0.05, theme.secondary)};
+    color: ${theme.secondary};
   }
   :hover {
-    color: ${theme.secondary};
+    color: ${lighten(0.15, theme.secondary)};
   }
   :active {
     color: ${lighten(0.1, theme.secondary)};

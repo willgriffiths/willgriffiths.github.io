@@ -1,7 +1,7 @@
 export const typography = {
   baseFontSize: 20,
-  baseLineHeight: 1.5,
-  headerLineHeight: 1.25
+  baseLineHeight: 1.2,
+  headerLineHeight: 1.2
 };
 
 export const sizes = {
