@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Link from "./Link";
 import Text from "./Text";
 import theme from "../styles/colors";
+import { typography } from "../styles/variables";
 
 const Container = styled.div`
   margin-bottom: 20px;
@@ -22,9 +23,18 @@ const ProjectLink = styled(Link)`
   font-weight: bold;
 `;
 
+const Year = styled.div`
+  background: ${theme.featureGradient};
+  color: ${theme.foreground};
+  padding: 0 3px;
+  display: inline-block;
+  font-size: ${typography.baseFontSize}px;
+  margin-bottom: 8px;
+`;
+
 const Project = ({ fields, frontmatter, html }) => (
   <Container>
-    <Text>{frontmatter.date && frontmatter.date.slice(0, 4)}</Text>
+    <Year>{frontmatter.date && frontmatter.date.slice(0, 4)}</Year>
     <ProjectLink to={fields.slug}>{frontmatter.title}</ProjectLink>
     {frontmatter.industry && (
       <Text>
