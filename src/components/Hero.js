@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Section } from "./FlexGrid";
+import theme from "../styles/colors";
 
 const Headline = styled.h1`
   font-size: 2rem;
@@ -11,8 +12,9 @@ const Tagline = Headline.withComponent("h2");
 
 const FeatureSpan = styled.span`
   position: relative;
-  background: linear-gradient(137.5deg, #e54230, #a22ae5);
+  background: ${theme.featureGradientTilted};
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 `;

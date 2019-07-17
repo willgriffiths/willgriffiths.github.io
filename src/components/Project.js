@@ -24,7 +24,7 @@ const ProjectLink = styled(Link)`
 `;
 
 const Year = styled.div`
-  background: ${theme.featureGradient};
+  background: ${theme.featureGradientTilted};
   color: ${theme.foreground};
   padding: 0 3px;
   display: inline-block;
